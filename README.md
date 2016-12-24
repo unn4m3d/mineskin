@@ -5,6 +5,8 @@ A gem to manipulate Minecraft skins [WIP]
 
 Currently its only features are extracting skin data and rendering 2D previews
 
+You can find documentation [here](https://unn4m3d.github.io/mineskin)
+
 Installation
 --
 `gem install mineskin`
