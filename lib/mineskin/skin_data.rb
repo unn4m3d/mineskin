@@ -19,12 +19,13 @@ module MineSkin
       :right_leg
     )
     attr_reader :unit
-
     def new_format?
       @new_format
     end
 
     # rubocop:disable AbcSize
+    # Initializes new instance of SkinData
+    # @param [String] filename Path to input file
     def initialize(filename)
       @image = Magick::Image.read(filename).first
       @new_format = @image.columns == @image.rows
@@ -35,6 +36,9 @@ module MineSkin
       @left_arm, @right_arm = extract_arms
     end
 
+    # Extracts texture
+    # @param [Hash] texture Texture coordinates (x,y,width,height)
+    # @return [Magick::Image] Image part
     def crop(texture)
       @image.crop(
         texture[:x] * @unit,
@@ -44,6 +48,10 @@ module MineSkin
       )
     end
 
+    # Constructs a Texture object from given regions
+    # @param [Hash,Array] texture Texture coordinates in array or hash
+    # @param [Hash, Array, nil] overlay Optional overlay coords
+    # @return [MineSkin::Texture] Texture object
     def part(texture: { x: 0, y: 0, width: 0, height: 0 }, overlay: nil)
       tex = crop coords_to_h texture
 
@@ -56,6 +64,9 @@ module MineSkin
       part
     end
 
+    # Constructs a Cuboid from given regions
+    # @param [Hash] hash Region data
+    # @return [MineSkin::Cuboid] Cuboid object
     def extract(hash)
       Cuboid.new(
         part(hash[:top]),

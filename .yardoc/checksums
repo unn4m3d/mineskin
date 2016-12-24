@@ -1,0 +1,4 @@
+lib/mineskin/preview.rb 7b35436bf2ca3f0b76b7ab9205321aa1b023d310
+lib/mineskin/skin_data.rb d86f0b746578c041924e3e3cdb5e1247b6042077
+lib/mineskin/unit.rb 282792022216e6dc206d64f29d5f20ae58750961
+lib/mineskin/version.rb f1f1322c263bf8099f5300fb7cbdbfde339b41d9

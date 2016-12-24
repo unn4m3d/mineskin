@@ -2,14 +2,20 @@ require 'rmagick'
 require 'mineskin/unit'
 module MineSkin
   module Preview
-    # 2D preview
+    # 2D preview of skin
     class Preview2D
       include Unit
 
+      # Initializes object with skin data
+      # @param [MineSkin::SkinData] skin_data Skin Data
       def initialize(skin_data)
         @skin_data = skin_data
       end
 
+      # Renders preview
+      # @param width Width of preview
+      # @param [String] background Optional background color (default white)
+      # @return [Magick::Image] Preview
       def render(width, background: 'white')
         @unit = image_unit size: width, count: 12
         @image = Magick::Image.new(width, 5 * width / 6) do
