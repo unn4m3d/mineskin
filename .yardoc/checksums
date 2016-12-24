@@ -1,4 +1,11 @@
-lib/mineskin/preview.rb 7b35436bf2ca3f0b76b7ab9205321aa1b023d310
-lib/mineskin/skin_data.rb d86f0b746578c041924e3e3cdb5e1247b6042077
+lib/mineskin.rb 57cfb9f46ad8ba07accc23b720234faecb317d75
 lib/mineskin/unit.rb 282792022216e6dc206d64f29d5f20ae58750961
-lib/mineskin/version.rb f1f1322c263bf8099f5300fb7cbdbfde339b41d9
+lib/mineskin/types.rb e3893538d1858380f688a903e7859a60fab23652
+lib/mineskin/version.rb e34b6957aa0397c797182cdad9df24c5ed9cbeb2
+lib/mineskin/preview.rb 7a6595a4bae23344d754560f92425e87f2e76c58
+lib/mineskin/extractor.rb 81781289f385390a0ba87a24afa3fe977fa22d12
+lib/mineskin/skin_data.rb cc7eecc41c6311e949d3529e8b51cd80c6fcccc9
+lib/mineskin/cape_data.rb f866881ebd0f49ff37efe9fcff8f03bfdbcf0a41
+lib/mineskin/compositor.rb 663189c3b92861aab0375977de3992a15116c00b
+lib/mineskin/preview/cape2d.rb 9fe0d19258200da2194d046f15e1b283610e29ad
+lib/mineskin/preview/skin2d.rb b368bc6043c07d5cf0921e95ac8afe2254c52d21
